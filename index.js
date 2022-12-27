@@ -1,12 +1,12 @@
-
 const express = require('express')
 const uuid = require('uuid')
+const cors = require('cors')
 
 const app = express()
-
 app.use(express.json())
+app.use(cors())
 
-const port = 3000
+const port = 3001
 const users = []
 
 const checkUser = (request, response, next) =>{
@@ -57,9 +57,9 @@ app.get('/order/:id', checkUser, checkUrl,(request, response) =>{
 
 app.post('/order/', checkUrl, (request, response) =>{
 
-    const {id, order,clientName, price, status} = request.body
+    const {name, age,} = request.body
 
-    const user = {id: uuid.v4(), order,clientName, price, status}
+    const user = {id: uuid.v4(), name, age}
 
     users.push(user)
 
@@ -101,5 +101,5 @@ app.patch('/order/:id', checkUser, checkUrl, (request, response) =>{
 })
 
 app.listen(port, () => {
-    console.log(`🌎Server started on port ${port}`)
+    console.log(`🚀Server started on port ${port}`)
 })
