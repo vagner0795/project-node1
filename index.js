@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-const port = 3001
+const port = process.env.PORT || 3001
 const users = []
 
 const checkUser = (request, response, next) =>{
@@ -57,9 +57,9 @@ app.get('/order/:id', checkUser, checkUrl,(request, response) =>{
 
 app.post('/order/', checkUrl, (request, response) =>{
 
-    const {name, age,} = request.body
+    const {name, age,pedidos} = request.body
 
-    const user = {id: uuid.v4(), name, age}
+    const user = {id: uuid.v4(), name, age, pedidos}
 
     users.push(user)
 
