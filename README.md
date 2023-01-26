@@ -1,23 +1,13 @@
-#Projeto Hamburgueria - back-end
+# Projeto API - back-end
 
+### Sobre
 
-
-<img src="./img/result1.png" width="300px" alt="img">
-
-<img src="./img/result2.png" width="300px" alt="img-">
-
-
-
-> Resultado do Projeto Hamburgueria
-
-### Sobre:
-
-O projeto é uma aplicação back-end usando javascript, node, express
+O projeto é uma aplicação back-end que pode ser usada como API, com ela é possível criar, visualizar e deletar usuários.
 
 - [x] EXPRESS
-- [X] NODE
-- [X] JAVASCRIPT
-- [X] INSOMNIA
+- [x] NODE
+- [x] NEXT
+- [x] JAVASCRIPT
 
 ## 🤝 Colaboradores
 
@@ -35,6 +25,3 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
-
-
-
